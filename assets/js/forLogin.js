@@ -1,7 +1,7 @@
 const url = "https://corporate-setup.herokuapp.com/api/v1/user/signup";
 const submitSignup = document.getElementById('signup-button');
 
-submit\Signup.addEventListener('click', function(e){
+submitSignup.addEventListener('click', function(e){
     e.preventDefault();
     
     const signupName = document.getElementById('signup-name').value;
@@ -16,25 +16,29 @@ submit\Signup.addEventListener('click', function(e){
     
     const signupConfirmPassword = document.getElementById('signup-confirm-pass').value;
 
-  const params = {
-    email: loginEmail,
-    password: loginPassword
-  };
+ if (signupConfirmPassword === signupPassword) {
   let formData = new FormData();
   formData.append('name', signupName);
-  formData.append('email', loginEmail);
+  formData.append('email', signupEmail);
   formData.append('username', signupUsername);
   formData.append('phone', signupPhoneNumber);
   formData.append('password', signupPassword);
+  formData.append('role', 'user')
   fetch(url, {method:"POST", body:formData})
   .then(res => res.json())
   .then(x => {
     console.log(x.data);
     if (x.status != 'error') {
       // similar behavior as an HTTP redirect
-     localStorage.setItem('token', x.data); 
+    //  localStorage.setItem('token', x.data); 
+     alert(x.data.message);
      window.location.replace("login.html");
+    } else {
+      alert(JSON.stringify(x.error));
     }
   })
+ } else {
+   alert ('password and confirm password must match')
+ }
   
 })
