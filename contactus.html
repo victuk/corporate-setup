@@ -167,7 +167,7 @@
                                 <!--</div>-->
                                 
                          
-                                <form class="form-signin cform" method="post" action="http://www.setupwizard.com.ng/contactus.php"  autocomplete="on">
+                                <form class="form-signin cform" >
                                     <div class="form-input">
                                         <input type="text" class="form-control shape" required name="name" id="name" placeholder="Your Name">
                                     </div>
@@ -182,7 +182,7 @@
                                     </div>
                                     
                                     
-                                       <div class="form-input">
+                                       <!-- <div class="form-input">
 
 
     
@@ -193,14 +193,14 @@
                                 <input type="hidden" name="num2" value="7"></input>
                                 <br>
                                     Enter result for above calculation <font color="#FF0000">*</font><br> 
-				    					</div>
+				    					</div> -->
                                   <!--  <div class="form-input clearfix captcha-div">
                                         <img alt="" src="assets/php/captcha26f3.html?_CAPTCHA&amp;t=0.25656600+1447644966" id='captchaimg' class="left">
                                         <input type="hidden" id="hidCap" value="N3Ndv" data-error="The captcha code does not match!" />
                                         <input id="captcha_input" class="sm-txtbox" name="captcha_input" type="text" required="required" placeholder="Enter the code here">
                                     </div>-->
                                     <div class="form-input center-tbl width-percent-70">
-                                        <input type="submit" name="submit" class="btn btn-lg main-bg btn-block submit-btn shape" value="Send Message">
+                                        <input type="submit" name="submit" class="btn btn-lg main-bg btn-block submit-btn shape" value="Send Message" id="submit-contact">
                                     </div>
                                 </form>
                             </div>
@@ -295,7 +295,11 @@
         <script type="text/javascript" src="assets/js/assets.min.js"></script>
                 
         <!-- general script file -->
-        <script type="text/javascript" src="assets/js/script.js"></script>
+		<script type="text/javascript" src="assets/js/script.js"></script>
+		<!-- SMTP script for mail sending -->
+		<script  src="https://smtpjs.com/v3/smtp.js"></script>
+		<!-- contact us js file -->
+		<script type="text/javascript" src="assets/js/contactus.js"></script>
 
 		
 	</body>
