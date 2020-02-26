@@ -14,6 +14,7 @@ submitLogin.addEventListener('click', function(e){
     email: loginEmail,
     password: loginPassword
   };
+  console.log(JSON.stringify(params))
   let formData = new FormData();
   formData.append('email', loginEmail);
   formData.append('password', loginPassword);
@@ -24,7 +25,9 @@ submitLogin.addEventListener('click', function(e){
     if (x.status != 'error') {
       // similar behavior as an HTTP redirect
      localStorage.setItem('token', x.data); 
-     window.location.replace("index.html");
+     window.location.replace("index-2.html");
+    } else {
+      alert(x.error.username);
     }
   })
   
