@@ -8,6 +8,10 @@ function getIndex(){
     let selected = selectOption.options[selectOption.selectedIndex].value;
     let showProduct = document.getElementById("show_product");
     
+    if(selected == 0){
+        showProduct.innerHTML = "";
+    }
+    
     if(selected == 1){
         
         showProduct.innerHTML = `<div class="row" id="show_product"><div class="col-md-12"> <input type="checkbox" name="service[]" id="3" value="3"> INCORPORATIONS ( CAC,CAC 7,CAC2)</div><div class="col-md-12"> <input type="checkbox" name="service[]" id="15" value="15"> TIN NUMBER</div><div class="col-md-12"> <input type="checkbox" name="service[]" id="7" value="7"> OFFICE ACQUISITION/OFFICE EQUIPMENT</div><div class="col-md-12"> <input type="checkbox" name="service[]" id="8" value="8"> OPEN A COMPANY BANK ACCOUNT</div><div class="col-md-12"> <input type="checkbox" name="service[]" id="16" value="16"> WEB DEVELOPMENT</div><div class="col-md-12"> <input type="checkbox" name="service[]" id="10" value="10"> PRE/POST ADVERTISEMENT</div><div class="col-md-12"> <input type="checkbox" name="service[]" id="11" value="11"> REGISTER COMPANY AS A BRAND DEALER</div> 
@@ -42,5 +46,6 @@ function getIndex(){
 
 </div>`;
     }
+    
 
 }
