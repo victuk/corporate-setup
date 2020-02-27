@@ -10,3 +10,8 @@ const loginButton = getElementById("login-button");
 //for create account button
 
 const createAccountButton = getElementById("create-account-button");
+
+if (!token) {
+    loginButton.style.display = 'none';
+    createAccountButton.style.display = 'none';
+}

@@ -30,7 +30,7 @@ let formData = new FormData();
     if (x.status != 'error') {
      alert(x.data);
       // similar behavior as an HTTP redirect 
-     window.location.replace("index-2.html");
+     window.location.replace("index.html");
     } else {
       alert(JSON.stringify(x.error));
     }
