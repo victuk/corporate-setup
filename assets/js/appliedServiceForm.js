@@ -28,6 +28,10 @@ const sub_button = document.getElementById('submit_request')
 sub_button.addEventListener('click', function (e){
   e.preventDefault();
   const theToken = localStorage.getItem('token');
+  if (!token) {
+    alert('Please Login')
+    window.location.replace("login.html");
+  }
   const option_sel = document.getElementById("sector")
   const country_sel = document.getElementById('request_country');
   const sector = option_sel.options[option_sel.selectedIndex].innerText;
