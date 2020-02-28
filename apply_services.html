@@ -17,6 +17,8 @@
     <!-- To remove login and register link if youre logged in already  -->
 		<script type="text/javascript" src="assets/js/condition.js"></script>
 		
+		<!-- Used to load the form values when they are selected -->
+		<script type="text/javascript" src="assets/js/appliedServiceForm.js"></script>
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Apply for Our Services&nbsp; - &nbsp; Corporate Setup | We set your Company Running in Nigeria</title>
@@ -336,8 +338,8 @@
                                      						    			<form action="#" id="hire_form" method="post">
                                         <div class="form-input">
 					    						<label>Select Sector<span class="red">*</span></label>
-					    						<select required name="sector" id="sector"  >
-                                                <option value="">Select Sector</option>
+					    						<select required name="sector" id="sector" onclick="getIndex()" >
+                                                <option value="0">Select Sector</option>
                                                 
                                                  <option value='1'>AUTOMOBILE WORKSHOP(DEALERSHIP AND REPAIR ONLY)</option><option value='2'>BANKING/FINANCE</option><option value='3'>BUYING AND SELLING(TRADING)</option><option value='4'>MANUFACTURING</option><option value='5'>MARINE</option><option value='6'>OIL AND GAS</option>                                                </select>
 					    					</div>
@@ -488,7 +490,7 @@ $("#terms").click(function() {
 
 </script>
 
-<script>  
+<!--<script>  
  $(document).ready(function(){  
       $('#sector').change(function(){  
            var sector_id = $(this).val();
@@ -503,7 +505,7 @@ $("#terms").click(function() {
            });  
       });  
  });  
- </script> 
+ </script> -->
 		
 	</body>
 
