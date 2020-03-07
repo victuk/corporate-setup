@@ -91,12 +91,12 @@
 								<li class=""><a href="about-us.html">About Us</a></li>
 								<li class=""><a href="services.html">Our Services</a></li>
                                 
-							
+
 								<li class="mega-menu selected"><a href="contactus.html">Contact Us</a></li>
+								<li class=""><a href="apply_services.html">Apply for services</a></li>
                                
-                                
-                       <li class="create-account-button"><a href="create-account.html">Create Account</a></li>
-                         <li class="login-button"><a href="login.html">Login</a></li>
+                                <li class="" id="create-account-button"><a href="create-account.html">Create Account</a></li>
+                                <li class="" id="login-button"><a href="login.html">Login</a></li>
                                 							</ul>
 						</nav>
                         
@@ -171,7 +171,7 @@
                                 <!--</div>-->
                                 
                          
-                                <form class="form-signin cform" method="post" action="http://www.setupwizard.com.ng/contactus.php"  autocomplete="on">
+                                <form class="form-signin cform" >
                                     <div class="form-input">
                                         <input type="text" class="form-control shape" required name="name" id="name" placeholder="Your Name">
                                     </div>
@@ -186,7 +186,7 @@
                                     </div>
                                     
                                     
-                                       <div class="form-input">
+                                       <!-- <div class="form-input">
 
 
     
@@ -197,14 +197,14 @@
                                 <input type="hidden" name="num2" value="7"></input>
                                 <br>
                                     Enter result for above calculation <font color="#FF0000">*</font><br> 
-				    					</div>
+				    					</div> -->
                                   <!--  <div class="form-input clearfix captcha-div">
                                         <img alt="" src="assets/php/captcha26f3.html?_CAPTCHA&amp;t=0.25656600+1447644966" id='captchaimg' class="left">
                                         <input type="hidden" id="hidCap" value="N3Ndv" data-error="The captcha code does not match!" />
                                         <input id="captcha_input" class="sm-txtbox" name="captcha_input" type="text" required="required" placeholder="Enter the code here">
                                     </div>-->
                                     <div class="form-input center-tbl width-percent-70">
-                                        <input type="submit" name="submit" class="btn btn-lg main-bg btn-block submit-btn shape" value="Send Message">
+                                        <input type="submit" name="submit" class="btn btn-lg main-bg btn-block submit-btn shape" value="Send Message" id="submit-contact">
                                     </div>
                                 </form>
                             </div>
@@ -270,7 +270,7 @@
 					    <div class="container">
 				    		<div class="row">
 					    		<!-- footer copyrights left cell -->
-					    		    		<div class="copyrights col-md-5 first">Powered by <a href="#" target="_new" class="main-color"><u>Cyberhub</u></a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <!--© Copyrights <b class="main-color">Setupwizard</b>--> .</div>
+					    		    		<div class="copyrights col-md-5 first">Powered by <a href="#" target="_new" class="main-color"><u>Corporate Setup</u></a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <!--© Copyrights <b class="main-color">Setupwizard</b>--> .</div>
 					    						    		
 					    		<!-- footer social links right cell start -->
 							    <div class="col-md-7 last">
@@ -291,7 +291,7 @@
 				</footer>		    <!-- Footer end -->
 		    		    	    	
 	    </div>
-	   
+	   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
         <!-- Back to top Link -->
         <a id="to-top"><span class="fa fa-chevron-up shape main-bg"></span></a>
  
@@ -299,7 +299,10 @@
         <script type="text/javascript" src="assets/js/assets.min.js"></script>
                 
         <!-- general script file -->
-        <script type="text/javascript" src="assets/js/script.js"></script>
+		<script type="text/javascript" src="assets/js/script.js"></script>
+		
+		<!-- contact us js file -->
+		<script type="text/javascript" src="assets/js/contactus.js"></script>
         
         <script type="text/javascript" src="assets/js/condition.js"></script>
 

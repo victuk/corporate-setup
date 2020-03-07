@@ -11,14 +11,14 @@
   gtag('config', 'UA-140738104-1');
 </script>
         
-        <!-- To remove login and register link if youre logged in already  -->
-		<script type="text/javascript" src="assets/js/condition.js"></script>
+        <!-- To remove login and register link if youre logged in already 
+		<script type="text/javascript" src="assets/js/condition.js"></script> -->
         
-    <!-- To remove login and register link if youre logged in already  -->
-		<script type="text/javascript" src="assets/js/condition.js"></script>
+    <!-- To remove login and register link if youre logged in already 
+		<script type="text/javascript" src="assets/js/condition.js"></script> -->
 		
-		<!-- Used to load the form values when they are selected -->
-		<script type="text/javascript" src="assets/js/appliedServiceForm.js"></script>
+		<!-- Used to load the form values when they are selected
+		<script type="text/javascript" src="assets/js/appliedServiceForm.js"></script> -->
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Apply for Our Services&nbsp; - &nbsp; Corporate Setup | We set your Company Running in Nigeria</title>
@@ -82,7 +82,7 @@
 		    	<div class="container fluid-header">
 			    	<!-- Logo start -->
 			    	<div class="logo">
-				    	<a href="index.html"><img alt="" src="assets/images/logo.png" /></a>
+				    	<a href="index.html"><img alt="" src="assets/images/logo11.png" /></a>
 				    </div>
 				    <!-- Logo end -->
 				    
@@ -94,12 +94,12 @@
 								<li class=""><a href="about-us.html">About Us</a></li>
 								<li class=""><a href="services.html">Our Services</a></li>
                                 
-								<!--<li class=""><a href="register.php">Register</a></li>-->
-                                
+
 								<li class=""><a href="contactus.html">Contact Us</a></li>
+								<li class="mega-menu selected"><a href="apply_services.html">Apply for services</a></li>
                                
-                                <li class="create-account-button"><a href="create-account.html">Create Account</a></li>
-                         <li class="login-button"><a href="login.html">Login</a></li>
+                                <li class="" id="create-account-button"><a href="create-account.html">Create Account</a></li>
+                                <li class="" id="login-button"><a href="login.html">Login</a></li>
                                 							</ul>
 						</nav>
                         
@@ -335,7 +335,7 @@
 						    			<h3 class="uppercase head-6"><span class="main-color">Apply For</span> Our service</h3>
 									</div>
 						    		<div class="contact-form">
-                                     						    			<form action="#" id="hire_form" method="post">
+                                     						    			<form id="hire_form" >
                                         <div class="form-input">
 					    						<label>Select Sector<span class="red">*</span></label>
 					    						<select required name="sector" id="sector" onclick="getIndex()" >
@@ -349,28 +349,28 @@
                                              
 					    					<div class="form-input">
 					    						<label>Full name<span class="red">*</span></label>
-					    						<input type="text" name="name" class="form-control " required value="">
+					    						<input type="text" name="name" class="form-control " required value="" id="full_name">
 					    					</div>
 					    					<div class="form-input">
 					    						<label>Email<span class="red">*</span></label>
-					    						<input type="text" name="email" class="form-control " required value="">
+					    						<input type="text" name="email" class="form-control " required value="" id="request_email">
 					    					</div>
 					    					<div class="form-input">
 					    						<label>Phone<span class="red">*</span></label>
-                                                <input type="text" name="phone" class="form-control " required value="">
+                                                <input type="text" name="phone" class="form-control " required value="" id="request_phone">
                                                 </div>
                                                 <div class="form-input">
 					    						<label>Company Name<span class="red">*</span></label>
-                                                <input type="text" name="company" class="form-control " required value="">
+                                                <input type="text" name="company" class="form-control " required value="" id="request_company">
                                                 </div>
 					    					<div class="form-input">
-					    						<select required name="country" >
+					    						<select required name="country" id="request_country">
 					    							<option value="">select your country</option>
 					    						<option value='1'>Afghanistan, Islamic State of</option><option value='2'>Aland Islands</option><option value='3'>Albania</option><option value='4'>Algeria</option><option value='5'>American Samoa</option><option value='6'>Andorra, Principality of</option><option value='7'>Angola</option><option value='8'>Anguilla</option><option value='9'>Antarctica</option><option value='10'>Antigua and Barbuda</option><option value='11'>Argentina</option><option value='12'>Armenia</option><option value='13'>Aruba</option><option value='14'>Australia</option><option value='15'>Austria</option><option value='16'>Azerbaijan</option><option value='17'>Bahamas</option><option value='18'>Bahrain</option><option value='19'>Bangladesh</option><option value='20'>Barbados</option><option value='21'>Belarus</option><option value='22'>Belgium</option><option value='23'>Belize</option><option value='24'>Benin</option><option value='25'>Bermuda</option><option value='26'>Bhutan</option><option value='27'>Bolivia</option><option value='28'>Bonaire, Sint Eustatius and Saba</option><option value='29'>Bosnia-Herzegovina</option><option value='30'>Botswana</option><option value='31'>Bouvet Island</option><option value='32'>Brazil</option><option value='33'>British Indian Ocean Territory</option><option value='34'>Brunei Darussalam</option><option value='35'>Bulgaria</option><option value='36'>Burkina Faso</option><option value='37'>Burundi</option><option value='38'>Cambodia, Kingdom of</option><option value='39'>Cameroon</option><option value='40'>Canada</option><option value='41'>Cape Verde</option><option value='42'>Cayman Islands</option><option value='43'>Central African Republic</option><option value='44'>Chad</option><option value='45'>Chile</option><option value='46'>China</option><option value='47'>Christmas Island</option><option value='48'>Cocos (Keeling) Islands</option><option value='49'>Colombia</option><option value='50'>Comoros</option><option value='51'>Congo</option><option value='52'>Congo, Democratic Republic of the</option><option value='53'>Cook Islands</option><option value='54'>Costa Rica</option><option value='55'>Croatia</option><option value='56'>Cuba</option><option value='57'>Cura?ao</option><option value='58'>Cyprus</option><option value='59'>Czech Republic</option><option value='60'>Denmark</option><option value='61'>Djibouti</option><option value='62'>Dominica</option><option value='63'>Dominican Republic</option><option value='64'>East Timor</option><option value='65'>Ecuador</option><option value='66'>Egypt</option><option value='67'>El Salvador</option><option value='68'>Equatorial Guinea</option><option value='69'>Eritrea</option><option value='70'>Estonia</option><option value='71'>Ethiopia</option><option value='72'>Falkland Islands</option><option value='73'>Faroe Islands</option><option value='74'>Fiji</option><option value='75'>Finland</option><option value='76'>France</option><option value='77'>French Guyana</option><option value='78'>French Southern Territories</option><option value='79'>Gabon</option><option value='80'>Gambia</option><option value='81'>Georgia</option><option value='82'>Germany</option><option value='83'>Ghana</option><option value='84'>Gibraltar</option><option value='85'>Greece</option><option value='86'>Greenland</option><option value='87'>Grenada</option><option value='88'>Guadeloupe (French)</option><option value='89'>Guam (USA)</option><option value='90'>Guatemala</option><option value='91'>Guernsey</option><option value='92'>Guinea</option><option value='93'>Guinea Bissau</option><option value='94'>Guyana</option><option value='95'>Haiti</option><option value='96'>Heard and McDonald Islands</option><option value='97'>Holy See (Vatican City State)</option><option value='98'>Honduras</option><option value='99'>Hong Kong</option><option value='100'>Hungary</option><option value='101'>Iceland</option><option value='102'>India</option><option value='103'>Indonesia</option><option value='104'>Iran</option><option value='105'>Iraq</option><option value='106'>Ireland</option><option value='107'>Isle of Man</option><option value='108'>Israel</option><option value='109'>Italy</option><option value='110'>Ivory Coast (Cote D'Ivoire)</option><option value='111'>Jamaica</option><option value='112'>Japan</option><option value='113'>Jersey</option><option value='114'>Jordan</option><option value='115'>Kazakhstan</option><option value='116'>Kenya</option><option value='117'>Kiribati</option><option value='118'>Kuwait</option><option value='119'>Kyrgyz Republic (Kyrgyzstan)</option><option value='120'>Laos</option><option value='121'>Latvia</option><option value='122'>Lebanon</option><option value='123'>Lesotho</option><option value='124'>Liberia</option><option value='125'>Libya</option><option value='126'>Liechtenstein</option><option value='127'>Lithuania</option><option value='128'>Luxembourg</option><option value='129'>Macau</option><option value='130'>Macedonia, the former Yugoslav Republic of</option><option value='131'>Madagascar</option><option value='132'>Malawi</option><option value='133'>Malaysia</option><option value='134'>Maldives</option><option value='135'>Mali</option><option value='136'>Malta</option><option value='137'>Marshall Islands</option><option value='138'>Martinique (French)</option><option value='139'>Mauritania</option><option value='140'>Mauritius</option><option value='141'>Mayotte</option><option value='142'>Mexico</option><option value='143'>Micronesia</option><option value='144'>Moldavia</option><option value='145'>Monaco</option><option value='146'>Mongolia</option><option value='147'>Montenegro</option><option value='148'>Montserrat</option><option value='149'>Morocco</option><option value='150'>Mozambique</option><option value='151'>Myanmar</option><option value='152'>Namibia</option><option value='153'>Nauru</option><option value='154'>Nepal</option><option value='155'>Netherlands</option><option value='156'>Netherlands Antilles</option><option value='157'>Neutral Zone</option><option value='158'>New Caledonia (French)</option><option value='159'>New Zealand</option><option value='160'>Nicaragua</option><option value='161'>Niger</option><option value='162'>Nigeria</option><option value='163'>Niue</option><option value='164'>Norfolk Island</option><option value='165'>North Korea</option><option value='166'>Northern Mariana Islands</option><option value='167'>Norway</option><option value='168'>Oman</option><option value='169'>Pakistan</option><option value='170'>Palau</option><option value='171'>Palestinian Territory, Occupied</option><option value='172'>Panama</option><option value='173'>Papua New Guinea</option><option value='174'>Paraguay</option><option value='175'>Peru</option><option value='176'>Philippines</option><option value='177'>Pitcairn Island</option><option value='178'>Poland</option><option value='179'>Polynesia (French)</option><option value='180'>Portugal</option><option value='181'>Puerto Rico</option><option value='182'>Qatar</option><option value='183'>Reunion (French)</option><option value='184'>Romania</option><option value='185'>Russian Federation</option><option value='186'>Rwanda</option><option value='187'>Saint Barth?l?my</option><option value='188'>Saint Helena</option><option value='189'>Saint Kitts & Nevis Anguilla</option><option value='190'>Saint Lucia</option><option value='191'>Saint Martin (French part)</option><option value='192'>Saint Pierre and Miquelon</option><option value='193'>Saint Tome (Sao Tome) and Principe</option><option value='194'>Saint Vincent & Grenadines</option><option value='195'>Samoa</option><option value='196'>San Marino</option><option value='197'>Saudi Arabia</option><option value='198'>Senegal</option><option value='199'>Serbia</option><option value='200'>Seychelles</option><option value='201'>Sierra Leone</option><option value='202'>Singapore</option><option value='203'>Sint Maarten (Dutch part)</option><option value='204'>Slovakia</option><option value='205'>Slovenia</option><option value='206'>Solomon Islands</option><option value='207'>Somalia</option><option value='208'>South Africa</option><option value='209'>South Georgia and the South Sandwich Islands</option><option value='210'>South Korea</option><option value='211'>South Sudan</option><option value='212'>Spain</option><option value='213'>Sri Lanka</option><option value='214'>Sudan</option><option value='215'>Suriname</option><option value='216'>Svalbard and Jan Mayen Islands</option><option value='217'>Swaziland</option><option value='218'>Sweden</option><option value='219'>Switzerland</option><option value='220'>Syria</option><option value='221'>Taiwan</option><option value='222'>Tajikistan</option><option value='223'>Tanzania</option><option value='224'>Thailand</option><option value='225'>Togo</option><option value='226'>Tokelau</option><option value='227'>Tonga</option><option value='228'>Trinidad and Tobago</option><option value='229'>Tunisia</option><option value='230'>Turkey</option><option value='231'>Turkmenistan</option><option value='232'>Turks and Caicos Islands</option><option value='233'>Tuvalu</option><option value='234'>Uganda</option><option value='235'>Ukraine</option><option value='236'>United Arab Emirates</option><option value='237'>United Kingdom</option><option value='238'>United States</option><option value='239'>Uruguay</option><option value='240'>USA Minor Outlying Islands</option><option value='241'>Uzbekistan</option><option value='242'>Vanuatu</option><option value='243'>Venezuela</option><option value='244'>Vietnam</option><option value='245'>Virgin Islands (British)</option><option value='246'>Virgin Islands (USA)</option><option value='247'>Wallis and Futuna Islands</option><option value='248'>Western Sahara</option><option value='249'>Yemen</option><option value='250'>Yugoslavia</option><option value='251'>Zaire</option><option value='252'>Zambia</option><option value='253'>Zimbabwe</option>					    						</select>
 					    					</div>
 					    					<div class="form-input">
 					    						<label>Message<span class="red">*</span></label>
-					    						<textarea  name="message" required></textarea>
+					    						<textarea  name="message" required id="request_message"></textarea>
 					    					</div>
 					    					<!--<div class="form-input">
 					    						<label>For more details upload your CV</label>
@@ -381,20 +381,20 @@
 
 
     
-     <label><strong style="color:blue">What is</strong> &nbsp;<strong style="color:red">  9</strong> &nbsp;-&nbsp; <strong style="color:red">9 </strong> ? </label>
+     <!-- <label><strong style="color:blue">What is</strong> &nbsp;<strong style="color:red">  9</strong> &nbsp;-&nbsp; <strong style="color:red">9 </strong> ? </label>
                                 <input type="text" id="math" name="userAnswer" size="15" required ></input>
                                 <input type="hidden" name="num1" value="9"></input>
                                 <input type="hidden" name="operand" value="1"></input>
                                 <input type="hidden" name="num2" value="9"></input>
                                 <br>
                                     Enter result for above calculation <font color="#FF0000">*</font><br> 
-				    					</div>
+				    					</div> -->
                                             
                                             <!--<em>Note: You need to register before we attend to your application and mails.(15,000 Naira (Nigeria Compnies) or 100 USD (foreign companies))</em><br><br>-->
                                             <input name="terms" id="terms" type="checkbox"  checked="checked" /> <a href="termsandcondition.html" target="_new"><u>I Accept the Terms and Conditions</u></a>
 					    					<div>
                                             <br>
-					    			<input type="submit" name="submit" id="postme" class="btn btn-md main-bg shape"  value="Submit">
+					    			<input type="submit" name="submit" id="submit_request" class="btn btn-md main-bg shape">
                                     
                                   <hr> <strong><u></u></strong>
                                    
@@ -426,7 +426,7 @@
 					    <div class="container">
 				    		<div class="row">
 					    		<!-- footer copyrights left cell -->
-					    		    		<div class="copyrights col-md-5 first">Powered by <a href="#" target="_new" class="main-color"><u>Berasoft</u></a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <!--© Copyrights <b class="main-color">Setupwizard</b>--> .</div>
+					    		    		<div class="copyrights col-md-5 first">Powered by <a href="#" target="_new" class="main-color"><u>Corporate Setup</u></a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <!--© Copyrights <b class="main-color">Setupwizard</b>--> .</div>
 					    						    		
 					    		<!-- footer social links right cell start -->
 							    <div class="col-md-7 last">
@@ -448,6 +448,7 @@
 		    </div>
 		</div>
 				
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 		<!-- Modal -->
 		
 		    	
@@ -462,9 +463,10 @@
  				
 		<!-- general script file -->
 		<script type="text/javascript" src="assets/js/script.js"></script>
-        <script language="javascript">
+		<script type="text/javascript" src="assets/js/appliedServiceForm.js"></script>
+        <!-- <script language="javascript"> -->
         
-	
+	<script>
 		/*$('#terms').click(function(){
 			if($(this).attr('checked')==false){
 				$('postme').attr("disabled","disabled");
