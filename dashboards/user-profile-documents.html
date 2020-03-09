@@ -101,8 +101,8 @@
             <!-- Button to upload a document starts here -->
         <form>
   <div class="form-group">
-    <label for="exampleFormControlFile1">Upload Document</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    <label for="upload-document-button">Upload Document</label>
+    <input type="file" class="form-control-file" id="upload-document-button">
   </div>
 </form>
             <!-- Btutton to upload a document ends here -->
@@ -113,11 +113,11 @@
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-success">Edit</a>
-        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Share</a>
-        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">Delete</a>
+        <h5 class="card-title" id="card-title">Special title treatment</h5>
+        <p class="card-text" id="card-description">With supporting text below as a natural lead-in to additional content.</p>
+        
+        <a href="#" class="btn btn-success" data-toggle="modal" id="share-card-button" data-target="#exampleModal">Share</a>
+        <a href="#" class="btn btn-danger" data-toggle="modal" id="delete-card-button" data-target="#exampleModalCenter">Delete</a>
 <!-- First card ends here -->
         
  <!-- Modal for share starts here -->
@@ -141,7 +141,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Share</button>
+        <button type="button" class="btn btn-success" id="modal-share-button">Share</button>
       </div>
     </div>
   </div>
@@ -164,14 +164,14 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-        <button type="button" class="btn btn-success">Yes</button>
+        <button type="button" class="btn btn-success" id="modal-confirm-delete-button">Yes</button>
       </div>
     </div>
   </div>
 </div>
 <!-- Modal to delete a document ends here -->
 
-        <!-- Second card starts here -->
+        <!-- Second card starts here (This card isn't used by javascript because its same as the first card)-->
       </div>
     </div>
   </div>
@@ -180,7 +180,7 @@
       <div class="card-body">
         <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-success">Edit</a>
+        
         <a href="#" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Share</a>
         <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">Delete</a>
         <!-- Second card ends here -->

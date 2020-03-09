@@ -88,8 +88,8 @@
 				    
 				    <!-- Search input and search button starts here -->
   <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <input class="form-control mr-sm-2" id="search-input" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" id="search-button" type="submit">Search</button>
   </form>
                     <!-- Search input and search button ends here -->
 </nav>
@@ -97,12 +97,12 @@
         <p>
         <!-- Profile Picture starts here -->
         <div class="profile-userpic">
-					<img src="../assets/images/pimg.png" class="img-responsive" alt="">
+					<img src="../assets/images/pimg.png" id="profile-picture" class="img-responsive" alt="">
 					<!-- Button to upload a profile picture -->
 					<form>
   <div class="form-group">
-    <label for="exampleFormControlFile1">Upload Picture</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    <label for="upload-picture-button">Upload Picture</label>
+    <input type="file" class="form-control-file" id="upload-picture-button">
   </div>
 </form>
 				</div>
@@ -110,6 +110,7 @@
 	    <!-- Profile picture ends here -->
 	    
 	    <!-- Admin details starts here -->
+	    <div id="user-profile-list">
    <ul class="list-group">
         <li class="list-group-item">Username: victorp3tr</li>
         <li class="list-group-item"><i class="fa fa-envelope">: </i>victorp3tr@gmail.com</li>
@@ -118,6 +119,8 @@
         <li class="list-group-item"><a href="#" class="btn btn-success">Edit</a></li>
     </ul>
 <!-- Admin details ends here -->
+
+        </div>
 <br>
 </div>
 		
