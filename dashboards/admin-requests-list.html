@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>User requests&nbsp; - &nbsp; Corporate setup | We Set up Just Like You Like It</title>
+  	<title>Documents&nbsp; - &nbsp; Corporate setup | We Set up Just Like You Like It</title>
   	<link rel="shortcut icon" href="../assets/images/favicon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -40,11 +40,17 @@
 				<div class="p-4">
 		  		<h1><a href="user-profile-documents.html" class="logo">Dahsboard</a></h1>
 	        <ul class="list-unstyled components mb-5">
-	          <li>
-	            <a href="user-profile.html"><span class="fa fa-home mr-3"></span> Profile</a>
-	          </li>
 	          <li class="active">
-	              <a href="user-profile-documents.html"><span class="fa fa-user mr-3"></span> Documents</a>
+	            <a href="admin-profile.html"><span class="fa fa-home mr-3"></span> Profile</a>
+	          </li>
+	          <!--<li>
+	              <a href="admin-profile-documents.html"><span class="fa fa-user mr-3"></span> Documents</a>
+	          </li> -->
+	          <li>
+               <a href="admin-profile-users-list.html"><span class="fa fa-briefcase mr-3"></span> Users List</a>
+	          </li>
+	          <li>
+               <a href="admin-requests-list.html"><span class="fa fa-briefcase mr-3"></span>Requests</a>
 	          </li>
 	          <li>
                <a href="#"><span class="fa fa-briefcase mr-3"></span> Log Out</a>
@@ -98,17 +104,9 @@
 </nav>
 
 
-        <h2 class="mb-4">Admin's User Requests List</h2>
+        <h2 class="mb-4">Documents</h2>
         <p>
         
-            <!-- Button to upload a document starts here -->
-        <form>
-  <div class="form-group">
-    <label for="upload-document-button">Upload Document</label>
-    <input type="file" class="form-control-file" id="upload-document-button">
-  </div>
-</form>
-            <!-- Btutton to upload a document ends here -->
               			
 <!-- First card starts here -->
 <br><br>
@@ -116,8 +114,15 @@
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title" id="card-title">Special title treatment</h5>
-        <p class="card-text" id="card-description">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title" id="card-title">Incorporation</h5>
+        <p class="card-text" id="senders-email">victorp3tr@gmail.com</p>
+        Approved state:
+        <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Approved
+  </label>
+</div>
         
         <a href="#" class="btn btn-success" data-toggle="modal" id="share-card-button" data-target="#exampleModal">Share</a>
         <a href="#" class="btn btn-danger" data-toggle="modal" id="delete-card-button" data-target="#exampleModalCenter">Delete</a>
