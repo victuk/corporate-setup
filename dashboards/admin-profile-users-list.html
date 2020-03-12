@@ -47,20 +47,33 @@
 	              <a href="admin-profile-documents.html"><span class="fa fa-user mr-3"></span> Documents</a>
 	          </li> -->
 	          <li class="active">
-               <a href="admin-profile-users-list.html"><span class="fa fa-briefcase mr-3"></span> Users List</a>
+               <a href="admin-profile-users-list.html"><span class="fa fa-list-ul mr-3"></span> List Users</a>
 	          </li>
 	          <li>
-               <a href="admin-requests-list.html"><span class="fa fa-briefcase mr-3"></span>Requests</a>
+               <a href="admin-requests-list.html"><span class="fa fa-spinner mr-3"></span>Requests</a>
 	          </li>
 	          <li>
-               <a href="#"><span class="fa fa-briefcase mr-3"></span> Log Out</a>
+				<a href="#" data-toggle="modal" id="share-card-button" data-target="#log-out"><span class="fa fa-sign-out mr-3"></span>Log Out</a>
 	          </li>
-	          <!-- <li>
-              <a href="#"><span class="fa fa-sticky-note mr-3"></span> Blog</a>
-	          </li>
-	          <li>
-              <a href="#"><span class="fa fa-paper-plane mr-3"></span> Contact</a>
-	          </li> -->
+	          <div class="modal fade" id="log-out" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <h5 class="modal-title" id="exampleModalLongTitle">Log Out</h5>
+					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					  </button>
+					</div>
+					<div class="modal-body" style="color:black;">
+						Do you want to Log Out?
+					</div>
+					<div class="modal-footer">
+					  <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+					  <button type="button" class="btn btn-success" id="log-out-button">Yes</button>
+					</div>
+				  </div>
+				</div>
+			  </div>
 	        </ul>
 
 	       <!-- <div class="mb-5">
@@ -98,43 +111,37 @@
   </form>
                     <!-- Search button and input ends here -->
 </nav>
-        <h2 class="mb-4">Users List</h2>
+        <h2 class="mb-4">List Users</h2>
         <div class="user-list">
         <!-- First user list starts here -->
         <ul class="list-group">
   <li class="list-group-item">Username: victorp3tr</li>
-  <li class="list-group-item"><i class="fa fa-envelope">: </i>victorp3tr@gmail.com</li>
-  <li class="list-group-item"><i class="fa fa-phone">: </i>08137249484</li>
-  <li class="list-group-item">CAC Form State : Completed</li>
-  <li class="list-group-item"><a href="#" class="btn btn-success">Edit</a></li>
+  <li class="list-group-item">E-mail: </i>victorp3tr@gmail.com</li>
+  <li class="list-group-item"><a href="admin-view-user-profile.html" class="btn btn-success">View</a></li>
 </ul><br>
         <!-- First user list ends here -->
         
         <!-- Second user list starts here -->
    <ul class="list-group">
   <li class="list-group-item">Username: victorp3tr</li>
-  <li class="list-group-item"><i class="fa fa-envelope">: </i>victorp3tr@gmail.com</li>
-  <li class="list-group-item"><i class="fa fa-phone">: </i>08137249484</li>
-  <li class="list-group-item">CAC Form State : Completed</li>
-  <li class="list-group-item"><a href="#" class="btn btn-success">Edit</a></li>
+  <li class="list-group-item">E-mail: </i>victorp3tr@gmail.com</li>
+  <li class="list-group-item"><a href="admin-view-user-profile.html" class="btn btn-success">View</a></li>
 </ul><br>
        <!-- Second user list ends here -->
        
        <!-- Third user list starts here -->
 <ul class="list-group">
   <li class="list-group-item">Username: victorp3tr</li>
-  <li class="list-group-item"><i class="fa fa-envelope">: </i>victorp3tr@gmail.com</li>
-  <li class="list-group-item"><i class="fa fa-phone">: </i>08137249484</li>
-  <li class="list-group-item">CAC Form State : Completed</li>
-  <li class="list-group-item"><a href="#" class="btn btn-success">Edit</a></li>
+  <li class="list-group-item">E-mail: </i>victorp3tr@gmail.com</li>
+  <li class="list-group-item"><a href="admin-view-user-profile.html" class="btn btn-success">View</a></li>
 </ul><br>
       <!-- Third user list ends here -->
 </div>
 
 <br>
 </div>
-		
-		
+		<script src="js/functionalities/for-all-logouts.js"></script>
+		<script src="https://use.fontawesome.com/9ff00e0cee.js"></script>
     <script src="js/functionalities/admin-users-list.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Documents&nbsp; - &nbsp; Corporate setup | We Set up Just Like You Like It</title>
+  	<title>Request List&nbsp; - &nbsp; Corporate setup | We Set up Just Like You Like It</title>
   	<link rel="shortcut icon" href="../assets/images/favicon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -40,30 +40,40 @@
 				<div class="p-4">
 		  		<h1><a href="user-profile-documents.html" class="logo">Dahsboard</a></h1>
 	        <ul class="list-unstyled components mb-5">
-	          <li class="active">
+	          <li>
 	            <a href="admin-profile.html"><span class="fa fa-home mr-3"></span> Profile</a>
 	          </li>
 	          <!--<li>
 	              <a href="admin-profile-documents.html"><span class="fa fa-user mr-3"></span> Documents</a>
 	          </li> -->
 	          <li>
-               <a href="admin-profile-users-list.html"><span class="fa fa-briefcase mr-3"></span> Users List</a>
+               <a href="admin-profile-users-list.html"><span class="fa fa-list-ul mr-3"></span> List Users</a>
+	          </li>
+	          <li class="active">
+               <a href="admin-requests-list.html"><span class="fa fa-spinner mr-3"></span>Requests</a>
 	          </li>
 	          <li>
-               <a href="admin-requests-list.html"><span class="fa fa-briefcase mr-3"></span>Requests</a>
+				<a href="#" data-toggle="modal" id="share-card-button" data-target="#log-out"><span class="fa fa-sign-out mr-3"></span>Log Out</a>
 	          </li>
-	          <li>
-               <a href="#"><span class="fa fa-briefcase mr-3"></span> Log Out</a>
-	          </li>
-	          <!-- <li>
-              <<a href="#"><span class="fa fa-briefcase mr-3"></span> Portfolio</a>
-	          </li>
-	          <li>
-              <a href="#"><span class="fa fa-sticky-note mr-3"></span> Blog</a>
-	          </li>
-	          <li>
-              <a href="#"><span class="fa fa-paper-plane mr-3"></span> Contact</a>
-	          </li> -->
+	          <div class="modal fade" id="log-out" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <h5 class="modal-title" id="exampleModalLongTitle">Log Out</h5>
+					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					  </button>
+					</div>
+					<div class="modal-body" style="color:black;">
+						Do you want to Log Out?
+					</div>
+					<div class="modal-footer">
+					  <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+					  <button type="button" class="btn btn-success" id="log-out-button">Yes</button>
+					</div>
+				  </div>
+				</div>
+			  </div>
 	        </ul>
 
 	        <!--<div class="mb-5">
@@ -104,7 +114,7 @@
 </nav>
 
 
-        <h2 class="mb-4">Documents</h2>
+        <h2 class="mb-4">Request List</h2>
         <p>
         
               			
@@ -259,7 +269,8 @@
       </div>
 		</div>
 		
-		
+		<script src="js/functionalities/for-all-logouts.js"></script>
+		<script src="https://use.fontawesome.com/9ff00e0cee.js"></script>
     <script src="js/functionalities/user-documents.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
