@@ -41,23 +41,36 @@
 		  		<h1><a href="user-profile-documents.html" class="logo">Dahsboard</a></h1>
 	        <ul class="list-unstyled components mb-5">
 	          <li>
-	            <a href="user-profile.html"><span class="fa fa-home mr-3"></span> Profile</a>
+	            <a href="user-profile.html"><span class="fa fa-user mr-3"></span> Profile</a>
 	          </li>
 	          <li class="active">
-	              <a href="user-profile-documents.html"><span class="fa fa-user mr-3"></span> Documents</a>
+	              <a href="user-profile-documents.html"><span class="fa fa-file mr-3"></span> Documents</a>
 	          </li>
 	          <li>
-               <a href="#"><span class="fa fa-briefcase mr-3"></span> Log Out</a>
-	          </li>
-	          <!-- <li>
-              <<a href="#"><span class="fa fa-briefcase mr-3"></span> Portfolio</a>
+	              <a href="user-our-service.html"><span class="fa fa-sliders mr-3"></span>Services</a>
 	          </li>
 	          <li>
-              <a href="#"><span class="fa fa-sticky-note mr-3"></span> Blog</a>
+				<a href="#" data-toggle="modal" id="share-card-button" data-target="#log-out"><span class="fa fa-sign-out mr-3"></span>Log Out</a>
 	          </li>
-	          <li>
-              <a href="#"><span class="fa fa-paper-plane mr-3"></span> Contact</a>
-	          </li> -->
+	          <div class="modal fade" id="log-out" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <h5 class="modal-title" id="exampleModalLongTitle">Log Out</h5>
+					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					  </button>
+					</div>
+					<div class="modal-body" style="color:black;">
+						Do you want to Log Out?
+					</div>
+					<div class="modal-footer">
+					  <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+					  <button type="button" class="btn btn-success" id="log-out-button">Yes</button>
+					</div>
+				  </div>
+				</div>
+			  </div>
 	        </ul>
 
 	        <!--<div class="mb-5">
@@ -98,7 +111,7 @@
 </nav>
 
 
-        <h2 class="mb-4">Admin's User Requests List</h2>
+        <h2 class="mb-4">Uploaded Document</h2>
         <p>
         
             <!-- Button to upload a document starts here -->
@@ -137,7 +150,7 @@
         <form>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Recipients E-mail:</label>
-            <input type="text" class="form-control" id="recipient-name" autofocus>
+            <input type="text" class="form-control" id="recipient-name" style="border:1px solid green;" autofocus>
           </div>
           
         </form>
@@ -203,7 +216,7 @@
         <form>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Recipients E-mail:</label>
-            <input type="text" class="form-control" id="recipient-name" style="background-color:green;">
+            <input type="text" class="form-control" id="recipient-name" style="border:1px solid green;" autofocus>
           </div>
           
         </form>
@@ -254,7 +267,7 @@
       </div>
 		</div>
 		
-		
+		<script src="js/functionalities/for-all-logouts.js"></script>
     <script src="js/functionalities/user-documents.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
