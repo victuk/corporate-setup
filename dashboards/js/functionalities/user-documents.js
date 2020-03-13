@@ -17,6 +17,14 @@ const uploadDocumentButton = document.getElementById("upload-document-button");
 
 const recipientName = document.getElementById("recipient-name");
 
+const documentTextTitle = document.getElementById("Document-title");
+
+const theFileItself = document.getElementById("upload-document-button2");
+
+const modalUploadButton = document.getElementById("upload-document-modal-button");
+
+
+
 
 
 

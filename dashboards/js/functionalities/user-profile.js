@@ -21,7 +21,7 @@ const getProfile = () => {
     const theToken = localStorage.getItem('token');
     if (!theToken) {
       alert('Please Login')
-      window.location.replace("login.html");
+      window.location.replace("../login.html");
     }
     const url = "https://corporate-setup.herokuapp.com/api/v1/user/profile"
    fetch(url, {
@@ -47,5 +47,4 @@ const getProfile = () => {
 }
 
 getProfile();
-
 
