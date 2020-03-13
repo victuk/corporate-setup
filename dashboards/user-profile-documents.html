@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>User requests&nbsp; - &nbsp; Corporate setup | We Set up Just Like You Like It</title>
+  	<title>User Documents&nbsp; - &nbsp; Corporate setup | We Set up Just Like You Like It</title>
   	<link rel="shortcut icon" href="../assets/images/favicon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -102,26 +102,51 @@
 				    </div>
 				    
 				    
-				    <!-- Search input and button starts here  -->
+				    <!-- Search input and button starts here 
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
   </form>
-                    <!-- Search input and button ends here -->
+                    Search input and button ends here -->
 </nav>
 
 
-        <h2 class="mb-4">Uploaded Document</h2>
+        <h2 class="mb-4">Documents</h2>
         <p>
         
-            <!-- Button to upload a document starts here -->
+            <p><a href="#" class="btn btn-success" data-toggle="modal" data-target="#upload-document-modal">Upload Document</a>
+											
+											 <!-- Modal for Staff training starts here -->
+<div class="modal fade" id="upload-document-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Upload Document</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
         <form>
-  <div class="form-group">
-    <label for="upload-document-button">Upload Document</label>
-    <input type="file" class="form-control-file" id="upload-document-button">
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Document Title</label>
+            <input type="text" class="form-control" id="Document-title" style="border:1px solid green;" autofocus>
+          </div>
+           <div class="form-group">
+    <label for="upload-document-button2">Upload Document</label>
+    <input type="file" class="form-control-file" id="upload-document-button2">
   </div>
-</form>
-            <!-- Btutton to upload a document ends here -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal" id="upload-document-modal-button">Upload Picture</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for staff training ends here --></p>
               			
 <!-- First card starts here -->
 <br><br>
