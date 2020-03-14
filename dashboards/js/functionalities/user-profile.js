@@ -1,5 +1,6 @@
 //Template to make naming easy ;)
 //const  = document.getElementById("");
+const authErrors = ['Authentication required', 'Please Login to perform this operation']
 
 const searchInput = document.getElementById("search-input");
 

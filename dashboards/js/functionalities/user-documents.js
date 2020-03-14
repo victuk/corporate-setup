@@ -1,6 +1,8 @@
 //Template to make naming easy ;)
 //const  = document.getElementById("");
 
+const authErrors = ['Authentication required', 'Please Login to perform this operation']
+
 const cardTitle = document.getElementById("card-title");
 
 const cardDescription = document.getElementById("card-description");
@@ -127,5 +129,36 @@ const fetchDocuments = () => {
   })
 }
 
-fetchDocuments();
+// upload a file 
+const uploadDocuments = () => {
+  console.log(theFileItself.files[0])
+  const theToken = localStorage.getItem('token');
+    if (!theToken) {
+      alert('Please Login')
+      window.location.replace("login.html");
+    }
+    const url = "https://corporate-setup.herokuapp.com/api/v1/user/upload"
+    const formData = new FormData();
+    formData.append('title', documentTextTitle.value)
+    formData.append('type', 'uploaded')
+    formData.append('file', theFileItself.files[0])
+   fetch(url, {
+      method:"POST", 
+      headers: new Headers({
+    'Authorization': `Bearer ${theToken}`
+    }),
+   })
+  .then(res => res.json())
+  .then(x => {
+    if (x.status != 'error') {
+        location.reload()
+    } else if (x.status == 'error') {
+      const message = x.error.message == "jwt expired" ? "Please Login to perform this operation" : x.error
+      if (authErrors.includes(message)) { window.location.replace("../../login.html") }
+      alert(message);
+    }
+  })
+}
 
+fetchDocuments();
+modalUploadButton.addEventListener('click', () => uploadDocuments())
