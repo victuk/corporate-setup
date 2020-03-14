@@ -7,15 +7,25 @@ const searchInput = document.getElementById("search-input");
 
 const searchButton = document.getElementById("search-button");
 
+const saveUserId = (id) => {
+    console.log('thisnis fkjkj')
+    localStorage.setItem('user_id', id);
+    window.location.replace('admin-view-user-profile.html');
+};
+
 
 const createUser = (data) => {
         const el = `<ul class="list-group">
         <li class="list-group-item">Name: ${data.name}</li>
         <li class="list-group-item">E-mail: ${data.email}</li>
-        <li class="list-group-item"><a href="admin-view-user-profile.html" class="btn btn-success">View</a></li>
+        <li class="list-group-item"><button class="btn btn-success" id="view-profile" onclick="(saveUserId('${data.uuid}'))">View</button></li>
         </ul><br>`;
       return el;
 };
+
+// document.getElementById('view-profile').addEventListener('click', () => {
+    
+// })
 
 //list users on the platform
 
@@ -50,3 +60,4 @@ const fetchUsers = () => {
 }
 
 fetchUsers();
+
