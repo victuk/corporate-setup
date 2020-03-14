@@ -23,10 +23,6 @@ const createUser = (data) => {
       return el;
 };
 
-// document.getElementById('view-profile').addEventListener('click', () => {
-    
-// })
-
 //list users on the platform
 
 const fetchUsers = () => {
