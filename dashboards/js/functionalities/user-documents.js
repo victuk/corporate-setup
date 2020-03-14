@@ -20,6 +20,7 @@ const uploadDocumentButton = document.getElementById("upload-document-button");
 const recipientName = document.getElementById("recipient-name");
 
 const cardContainer = document.getElementById("card_container");
+
 const documentTextTitle = document.getElementById("Document-title");
 
 const theFileItself = document.getElementById("upload-document-button2");
