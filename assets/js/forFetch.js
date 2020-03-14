@@ -24,7 +24,8 @@ submitLogin.addEventListener('click', function(e){
     console.log(x.data);
     if (x.status != 'error') {
       // similar behavior as an HTTP redirect
-     localStorage.setItem('token', x.data); 
+     localStorage.setItem('token', x.data);
+     localStorage.setItem('role', 'user'); 
      window.location.replace("/dashboards/user-profile.html");
     } else {
       alert(x.error.username);
