@@ -115,26 +115,78 @@
         <h2 class="mb-4">User Profile Details (From Admin)</h2>
         <p>
         <!-- Profile Picture starts here -->
-        <div class="profile-userpic">
-					<img src="../assets/images/pimg.png" id="profile-picture" class="img-responsive" alt="">
-					<!-- Button to upload a profile picture -->
-					
-				</div>
+        
 				
 	    <!-- Profile picture ends here -->
 	    
 	    <!-- Admin user details starts here -->
 	    <div id="user-profile-list">
    <ul class="list-group">
+        <li class="list-group-item">
+            <div class="profile-userpic">
+					<img src="../assets/images/pimg.png" id="profile-picture" class="img-responsive" alt="">
+					<!-- Button to upload a profile picture -->
+					
+				</div>
+        </li>
         <li class="list-group-item">Username: victorp3tr</li>
         <li class="list-group-item">E-mail: victorp3tr@gmail.com</li>
         <li class="list-group-item">Phone Number: 08137249484</li>
-        <li class="list-group-item"><p>Users Document</p>
        
         </li>
-        <li class="list-group-item"><a href="#" class="btn btn-success">Suspend User</a> <a href="#" class="btn btn-danger">Delete User</a></li>
-    </ul>
-    <h2 class="m-4">Uploaded Documents</h2>
+        <li class="list-group-item">
+        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#upload-document-modal">Upload Document</a>
+											
+											 <!-- Modal for uploading document starts here -->
+<div class="modal fade" id="upload-document-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Upload Document</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Name Of Document</label>
+            <input type="text" class="form-control" id="Document-title" style="border:1px solid green;" autofocus>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Body Responsible for giving Document</label>
+            <input type="text" class="form-control" id="body-responsible-for-giving-document-input" style="border:1px solid green;" autofocus>
+          </div>
+          
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Date Acquires</label>
+            <input type="text" class="form-control" id="dte-cquired" style="border:1px solid green;" autofocus>
+          </div>
+          
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Expiry Date</label>
+            <input type="text" class="form-control" id="document-expiry-date" style="border:1px solid green;" autofocus>
+          </div>
+           <div class="form-group">
+    <label for="upload-document-button2">Upload Document</label>
+    <input type="file" class="form-control-file" id="upload-document-button2">
+  </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal" id="upload-document-modal-button" data-dismiss="modal">Upload Picture</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for upload document ends here -->
+
+
+        <a href="#" class="btn btn-success">Suspend User</a> <a href="#" class="btn btn-danger">Delete User</a></li>
+        <li class="list-group-item">
+             <h2 class="m-4">Uploaded Documents</h2>
 <!-- Admin user details ends here -->
  <ul class="list-group mt-4">
             <li class="list-group-item">Document 1 
@@ -159,11 +211,14 @@
             
             
         </ul>
+        </li>
+    </ul>
+   
         </div>
 <br>
 </div>
 		
-		<script src="js/functionalities/for-all-logouts.js"></script>
+	<script src="js/functionalities/for-all-logouts.js"></script>
     <script src="js/functionalities/admin-view-user-profile.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>

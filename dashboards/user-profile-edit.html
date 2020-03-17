@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Profile&nbsp; - &nbsp; Corporate setup | We Set up Just Like You Like It</title>
+  	<title>Edit Profile&nbsp; - &nbsp; Corporate setup | We Set up Just Like You Like It</title>
   	<link rel="shortcut icon" href="../assets/images/favicon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -38,9 +38,9 @@
 	        </button>
         </div>
 				<div class="p-4">
-		  		<h1><a href="user-profile.html" class="logo">Dahsboard</a></h1>
+		  		<h1><a href="user-profile-edit.html" class="logo">Dahsboard</a></h1>
 	        <ul class="list-unstyled components mb-5">
-	          <li class="active">
+	          <li>
 	            <a href="user-profile.html"><span class="fa fa-user mr-3"></span> Profile</a>
 	          </li>
 	          <li>
@@ -110,28 +110,37 @@
 </nav>
 
         <!-- Heading for profile -->
-        <h2 class="mb-4"> Company Profile Details</h2>
-        <p>
         
-        <!-- Profile Picture ends here -->
-        <div class="profile-userpic">
-					<img src="../assets/images/pimg.png" class="img-responsive" id="profile-picture" alt="">
-				</div>
-				<!-- Profile Picture ends here -->
+        <p>
+        			
+<!-- Edit form starts here -->
 				
-				<!-- Edit Button starts here -->
-				<div class="my-2">
-				<a href="user-profie-edit.html" class="btn btn-success">Edit</a>
-				</div>
-				<!-- Edit Button ends here -->
+				<form style="border: 2px solid green; border-radius: 5px;" class="p-4">
+				<h2 class="mb-4">Edit Company Profile Details</h2>
+				<div class="form-group">
+    <label for="upload-profile-picture-button">Change Profile Picture</label>
+    <input type="file" class="form-control-file" id="upload-profile-picture-button">
+  </div>
 				
-				<div id="user-profile-details">
-				<!-- The User Detail starts here -->
-            			<ul class="list-group">
-  <li class="list-group-item" id="name__">Name: Name</li>
-  <li class="list-group-item" id="email__">E-mail: email@email.com</li>
-  <li class="list-group-item" id="phone__">Phone Number: 000000000</li>
-               <!-- The user detail ends here -->
+  <div class="form-group">
+    <label for="companyInputName">Company Name</label>
+    <input type="text" class="form-control" id="companyInputName" placeholder="Enter Company's Name">
+  </div>
+  
+  <div class="form-group">
+    <label for="companyInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="companyInputEmail" placeholder="Enter company's email">
+  </div>
+  
+  <div class="form-group">
+    <label for="companyInputPhoneNumber">Phone Number</label>
+    <input type="tel" class="form-control" id="companyInputPhoneNumber" placeholder="Enter Company's phone number">
+  </div>
+  
+  <button type="submit" class="btn btn-success" id="form-update-button">Update</button>
+</form>
+				</div>
+				
   
 </ul>
 </div>
@@ -139,8 +148,8 @@
 <br>
 </div>
 		
-	<script src="js/functionalities/for-all-logouts.js"></script>
-    <script src="js/functionalities/user-profile.js"></script>
+    <script src="js/functionalities/for-all-logouts.js"></script>
+    <script src="js/functionalities/user-profile-edit.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
