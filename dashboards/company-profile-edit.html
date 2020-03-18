@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Profile&nbsp; - &nbsp; Corporate setup | We Set up Just Like You Like It</title>
+  	<title>Edit Profile&nbsp; - &nbsp; Corporate setup | We Set up Just Like You Like It</title>
   	<link rel="shortcut icon" href="../assets/images/favicon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,7 +30,7 @@
 		<div class="wrapper d-flex align-items-stretch">
 		
 		
-			<nav id="sidebar" class="active">
+			<nav id="sidebar">
 				<div class="custom-menu">
 					<button type="button" id="sidebarCollapse" class="btn btn-primary">
 	          <i class="fa fa-bars"></i>
@@ -38,16 +38,16 @@
 	        </button>
         </div>
 				<div class="p-4">
-		  		<h1><a href="user-profile.html" class="logo">Dahsboard</a></h1>
+		  		<h1><a href="company-profile-edit.html" class="logo">Dahsboard</a></h1>
 	        <ul class="list-unstyled components mb-5">
-	          <li class="active">
-	            <a href="user-profile.html"><span class="fa fa-user mr-3"></span> Profile</a>
+	          <li>
+	            <a href="company-profile.html"><span class="fa fa-user mr-3"></span> Profile</a>
 	          </li>
 	          <li>
-	              <a href="user-profile-documents.html"><span class="fa fa-file mr-3"></span> Documents</a>
+	              <a href="company-profile-documents.html"><span class="fa fa-file mr-3"></span> Documents</a>
 	          </li>
 	          <li>
-	              <a href="user-our-service.html"><span class="fa fa-sliders mr-3"></span>Services</a>
+	              <a href="company-our-service.html"><span class="fa fa-sliders mr-3"></span>Services</a>
 	          </li>
 	          <li>
 				<a href="#" data-toggle="modal" id="share-card-button" data-target="#log-out"><span class="fa fa-sign-out mr-3"></span>Log Out</a>
@@ -110,30 +110,60 @@
 </nav>
 
         <!-- Heading for profile -->
-        <h2 class="mb-4">Profile Details</h2>
-        <p>
         
-        <!-- Profile Picture -->
-        <div class="profile-userpic">
-					<img src="../assets/images/pimg.png" class="img-responsive" id="profile-picture" alt="">
-					
-					<!-- To upload an image -->
-					<form>
-  <div class="form-group">
-    <label for="upload-profile-picture-button">Upload Picture</label>
+        <p>
+        			
+<!-- Edit form starts here -->
+				
+				<form style="border: 2px solid green; border-radius: 5px;" class="p-4">
+				<h2 class="mb-4">Edit Company Profile Details</h2>
+				<div class="form-group">
+    <label for="upload-profile-picture-button">Change Company Logo</label>
     <input type="file" class="form-control-file" id="upload-profile-picture-button">
   </div>
+				
+  <div class="form-group">
+    <label for="companyInputName">Company Name</label>
+    <input type="text" class="form-control" id="companyInputName" placeholder="Enter Company's Name">
+  </div>
+  
+  <div class="form-group">
+    <label for="companyInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="companyInputEmail" placeholder="Enter company's email">
+  </div>
+  
+  <div class="form-group">
+    <label for="companyInputPhoneNumber">Phone Number</label>
+    <input type="tel" class="form-control" id="companyInputPhoneNumber" placeholder="Enter Company's phone number">
+  </div>
+  
+  <button type="submit" class="btn btn-success" id="form-update-button">Update</button>
 </form>
 				</div>
-				<div id="user-profile-details">
-				<!-- The User Detail starts here -->
-            			<ul class="list-group">
-  <li class="list-group-item" id="name__">Name: Name</li>
-  <li class="list-group-item" id="username__">Username: Username</li>
-  <li class="list-group-item" id="email__">E-mail: email@email.com</li>
-  <li class="list-group-item" id="phone__">Phone Number: 000000000</li>
-  <li class="list-group-item" id="status__">Status: Status</li>
-               <!-- The user detail ends here -->
+				
+	    <!-- Profile picture ends here -->
+	    
+	    <!-- Admin user details starts here -->
+	    <div id="user-profile-list">
+   <ul class="list-group" id="user-basic-profile">
+        <li class="list-group-item">E-mail: victorp3tr@gmail.com</li>
+        <li class="list-group-item">Phone Number: 08137249484</li>
+        <li class="list-group-item"><p>Users Document</p>
+        <ol>
+			<div class="row" id="card_container">
+				
+			  </div>
+        </ol>
+        </li>
+		<li class="list-group-item"><a href="#" class="btn btn-success" id="suspend-user">Suspend</a> <a href="#" class="btn btn-success" id="delete-user">Delete</a></li>
+    </ul>
+<!-- Admin user details ends here -->
+
+        </div>
+<br>
+</div>
+		
+    <script src="js/functionalities/admin-view-user-profile.js"></script>
   
 </ul>
 </div>
@@ -141,8 +171,8 @@
 <br>
 </div>
 		
-	<script src="js/functionalities/for-all-logouts.js"></script>
-    <script src="js/functionalities/user-profile.js"></script>
+    <script src="js/functionalities/for-all-logouts.js"></script>
+    <script src="js/functionalities/company-profile-edit.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>

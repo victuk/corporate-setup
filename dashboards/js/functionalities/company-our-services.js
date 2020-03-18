@@ -24,10 +24,10 @@ const applyForService = (email, service) => {
     console.log(x.data);
     if (x.status != 'error') {
       alert(x.data)
-      window.location.replace("user-profile.html")
+      window.location.replace("company-profile.html")
     } else if (x.status == 'error') {
       const message = x.error.message == "jwt expired" ? "Please Login to perform this operation" : x.error
-      if (authErrors.includes(message)) { window.location.replace("../../login.html") }
+      if (authErrors.includes(message)) { window.location.replace("../login.html") }
       alert(message);
     }
   })

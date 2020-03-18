@@ -1,7 +1,7 @@
 //Template to make naming easy ;)
 //const  = document.getElementById("");
 
-const userList = document.getElementById("user-list");
+const companyList = document.getElementById("company-list");
 
 const searchInput = document.getElementById("search-input");
 
