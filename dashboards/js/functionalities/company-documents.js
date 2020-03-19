@@ -32,7 +32,7 @@ const modalUploadButton = document.getElementById("upload-document-modal-button"
 
 
 const inflateCard = (data) => {
-    const el = `<ul class="list-group" data-user_uuid="data.user_uuid" data-file="data.file">
+    const el = `<ul class="list-group" data-owner="data.owner_uuid" data-file="data.file">
     <li class="list-group-item" id="name-of-document">${data.name} </li>
     <li class="list-group-item" id="body-responsible-for-document">${data.given_by}</li>
     <li class="list-group-item" id="document-date-acquired">${data.date_acquired}</li>
@@ -56,14 +56,14 @@ const inflateCard = (data) => {
           <form>
             <div class="form-group">
               <label for="recipient-name" class="col-form-label">Recipients E-mail:</label>
-              <input type="text" class="form-control" id="recipient-name" style="border:1px solid green;" autofocus>
+              <input type="email" class="form-control" onkeyup="saveEmail()" id="recipient-name" style="border:1px solid green;" autofocus>
             </div>
             
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-success" id="modal-share-button" data-dismiss="modal">Share</button>
+          <button type="button" class="btn btn-success" id="modal-share-button" data-dismiss="modal" onclick="shareFile('${data.name}', '${data.given_by}', '${data.date_acquired}','${data.expired_date}', '${data.file}', '${data.owner_uuid}')">Share</button>
         </div>
       </div>
     </div>
@@ -94,7 +94,6 @@ const inflateCard = (data) => {
   <!-- Modal to delete a document ends here -->
     </li>
                  <!-- The user detail ends here -->
-    
   </ul>`;
   return el;
 };
@@ -164,5 +163,49 @@ const uploadDocuments = () => {
   })
 }
 
+const shareFile = (name,given_by, date_acquired, expired_date, file, owner_uuid) => {
+  const email = localStorage.getItem('share_email')
+  console.log(name,email, given_by, date_acquired, expired_date, file, owner_uuid);
+  const theToken = localStorage.getItem('token');
+    if (!theToken) {
+      alert('Please Login')
+      window.location.replace("login.html");
+    }
+    const url = "https://corporate-setup.herokuapp.com/api/v1/user/share"
+    const formData = new FormData();
+    formData.append('name', name)
+    formData.append('given_by', given_by)
+    formData.append('email', email)
+    formData.append('date_acquired', date_acquired)
+    formData.append('expired_date', expired_date)
+    formData.append('type', 'shared')
+    formData.append('owner_uuid', owner_uuid)
+    formData.append('file', file);
+   fetch(url, {
+      method:"POST", 
+      body: formData,
+      headers: new Headers({
+    'Authorization': `Bearer ${theToken}`
+    }),
+   })
+  .then(res => res.json())
+  .then(x => {
+    if (x.status != 'error') {
+        location.reload()
+    } else if (x.status == 'error') {
+      const message = x.error.message == "jwt expired" ? "Please Login to perform this operation" : x.error
+      if (authErrors.includes(message)) { window.location.replace("../../login.html") }
+      alert(message);
+    }
+  })
+
+}
+
+function saveEmail() {
+  var x = document.getElementById("recipient-name").value;
+  localStorage.setItem('share_email', x)
+}
+
 fetchDocuments();
 modalUploadButton.addEventListener('click', () => uploadDocuments())
+
