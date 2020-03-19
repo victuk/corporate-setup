@@ -6,11 +6,12 @@ const companyList = document.getElementById("company-list");
 const searchInput = document.getElementById("search-input");
 
 const searchButton = document.getElementById("search-button");
+const userList = document.getElementById('company-list');
 
 const saveUserId = (id) => {
     console.log('thisnis fkjkj')
     localStorage.setItem('user_id', id);
-    window.location.replace('admin-view-user-profile.html');
+    window.location.replace('admin-view-company-profile.html');
 };
 
 
@@ -42,6 +43,7 @@ const fetchUsers = () => {
   .then(x => {
     const el = [];  
     if (x.status != 'error') {
+      console.log(x.data);
         x.data.forEach(d => {
             const user = createUser(d);
             el.push(user)
