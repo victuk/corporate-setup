@@ -22,6 +22,9 @@ const recipientName = document.getElementById("recipient-name");
 const cardContainer = document.getElementById("company-profile-details");
 
 const documentTextTitle = document.getElementById("Document-title");
+const dateAq = document.getElementById("dte-cquired");
+const expDate = document.getElementById("document-expiry-date");
+const bodyResponseible = document.getElementById("body-responsible-for-giving-document-input");
 
 const theFileItself = document.getElementById("upload-document-button2");
 
@@ -142,11 +145,15 @@ const uploadDocuments = () => {
     }
     const url = "https://corporate-setup.herokuapp.com/api/v1/user/upload"
     const formData = new FormData();
-    formData.append('title', documentTextTitle.value)
+    formData.append('name', documentTextTitle.value)
     formData.append('type', 'uploaded')
     formData.append('file', theFileItself.files[0])
+    formData.append('given_by', bodyResponseible.value)
+    formData.append('date_acquired', dateAq.value)
+    formData.append('expired_date', expDate.value)
    fetch(url, {
       method:"POST", 
+      body: formData,
       headers: new Headers({
     'Authorization': `Bearer ${theToken}`
     }),
@@ -165,7 +172,6 @@ const uploadDocuments = () => {
 
 const shareFile = (name,given_by, date_acquired, expired_date, file, owner_uuid) => {
   const email = localStorage.getItem('share_email')
-  console.log(name,email, given_by, date_acquired, expired_date, file, owner_uuid);
   const theToken = localStorage.getItem('token');
     if (!theToken) {
       alert('Please Login')
