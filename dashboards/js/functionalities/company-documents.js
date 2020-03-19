@@ -19,7 +19,7 @@ const uploadDocumentButton = document.getElementById("upload-document-button");
 
 const recipientName = document.getElementById("recipient-name");
 
-const cardContainer = document.getElementById("card_container");
+const cardContainer = document.getElementById("company-profile-details");
 
 const documentTextTitle = document.getElementById("Document-title");
 
@@ -32,68 +32,70 @@ const modalUploadButton = document.getElementById("upload-document-modal-button"
 
 
 const inflateCard = (data) => {
-    const el = ` <div class="col-sm-6">
-    <div class="card" id ="${data.uuid}" data-file= "${data.file}">
-      <div class="card-body">
-        <h5 class="card-title">${data.title}</h5>
-        
-        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Share</a>
-        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">Delete</a>
-        <!-- Second card ends here -->
-
-
-    <!-- Modal for the second cards' share button starts here -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Share To...</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Recipients E-mail:</label>
-            <input type="text" class="form-control" id="recipient-name" style="border:1px solid green;" autofocus>
-          </div>
+    const el = `<ul class="list-group" data-user_uuid="data.user_uuid" data-file="data.file">
+    <li class="list-group-item" id="name-of-document">${data.name} </li>
+    <li class="list-group-item" id="body-responsible-for-document">${data.given_by}</li>
+    <li class="list-group-item" id="document-date-acquired">${data.date_acquired}</li>
+    <li class="list-group-item" id="document-expiey-date">${data.expired_date}</li>
+    <li class="list-group-item" id="">
+     <a href="#" class="btn btn-success" data-toggle="modal" id="share-card-button" data-target="#exampleModal">Share</a>
+          <a href="#" class="btn btn-danger" data-toggle="modal" id="delete-card-button" data-target="#exampleModalCenter">Delete</a>
+  <!-- First card ends here -->
           
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Share</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal for second cards' share button ends here -->
-
-<!-- Modal for second button delete button starts here -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Delete Document</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Are you sure you want to delete this document?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-        <button type="button" class="btn btn-success">Yes</button>
+   <!-- Modal for share starts here -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Share To...</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Recipients E-mail:</label>
+              <input type="text" class="form-control" id="recipient-name" style="border:1px solid green;" autofocus>
+            </div>
+            
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success" id="modal-share-button" data-dismiss="modal">Share</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- Modal for second button delete ends here -->
+  
+  <!-- Modal for share ends here -->
+  
+  <!-- Modal To delete a document -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Delete Document</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete this document?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+          <button type="button" class="btn btn-success" id="modal-confirm-delete-button" data-dismiss="modal" onclick="logoutUser()">Yes</button>
+        </div>
       </div>
     </div>
-  </div>`;
+  </div>
+  <!-- Modal to delete a document ends here -->
+    </li>
+                 <!-- The user detail ends here -->
+    
+  </ul>`;
   return el;
 };
 
@@ -117,6 +119,7 @@ const fetchDocuments = () => {
   .then(x => {
     const el = [];  
     if (x.status != 'error') {
+      console.log(x.data);
         x.data.forEach(d => {
             const x = inflateCard(d);
             el.push(x)

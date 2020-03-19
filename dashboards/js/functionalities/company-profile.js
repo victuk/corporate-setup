@@ -12,15 +12,15 @@ const uploadPicButton = document.getElementById("upload-profile-picture-button")
 
 const companyProfileDetails = document.getElementById("company-profile-details");
 
-const companyName = document.getElementById("username__");
+const companyName = document.getElementById("name__");
 
 const phone = document.getElementById("phone__");
 
 const email = document.getElementById("email__");
 
-const _status = document.getElementById("status__");
+// const _status = document.getElementById("status__");
 
-const _name = document.getElementById("name__");
+// const _name = document.getElementById("name__");
 
 
 const getProfile = () => {
@@ -39,11 +39,10 @@ const getProfile = () => {
   .then(res => res.json())
   .then(x => {
     if (x.status != 'error') {
-      companyName.innerHTML = `Company Name: <span style = "color: green;">${x.data.profile.username}</span>`;
+      companyName.innerHTML = `Company Name: <span style = "color: green;">${x.data.profile.name}</span>`;
       phone.innerHTML = `Phone: <span style = "color: green;">${x.data.profile.phone}</span>`;
-      _name.innerHTML = `Name: <span style = "color: green;">${x.data.profile.name}</span>`;
       email.innerHTML = `Email: <span style = "color: green;">${x.data.profile.email}</span>`;
-      _status.innerHTML = `Status: <span style = "color: green;">${x.data.profile.status}</span>`
+      // _status.innerHTML = `Status: <span style = "color: green;">${x.data.profile.status}</span>`
     } else if (x.status == 'error') {
       const message = x.error.message == "jwt expired" ? "Please Login to perform this operation" : x.error
       if (authErrors.includes(message)) { window.location.replace("../login.html") }

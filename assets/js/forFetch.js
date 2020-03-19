@@ -26,7 +26,7 @@ submitLogin.addEventListener('click', function(e){
       // similar behavior as an HTTP redirect
      localStorage.setItem('token', x.data);
      localStorage.setItem('role', 'user'); 
-     window.location.replace("/dashboards/user-profile.html");
+     window.location.replace("/dashboards/company-profile.html");
     } else {
       alert(x.error.username);
     }
