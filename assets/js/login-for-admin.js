@@ -26,7 +26,7 @@ submitLogin.addEventListener('click', function(e){
       // similar behavior as an HTTP redirect
      localStorage.setItem('token', x.data); 
      localStorage.setItem('role', 'admin');
-     window.location.replace("/dashboards/admin-profile-users-list.html");
+     window.location.replace("/dashboards/admin-profile-company-list.html");
     } else {
       alert(x.error.username);
     }
