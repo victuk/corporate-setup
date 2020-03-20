@@ -19,6 +19,42 @@ const listDocs  = (array) => {
     return all;
 }
 
+const checkButtonText = (status) => {
+  return status === 'active' ? 'SUSPEND COMPANY' : 'ACTIVATE COMPANY'
+}
+
+const suspendCompany = (id) => {
+  console.log(id);
+  const theToken = localStorage.getItem('token');
+  if (!theToken) {
+    alert('Please Login')
+    window.location.replace("login.html");
+  }
+  const url = "https://corporate-setup.herokuapp.com/api/v1/admin/suspend-user"
+  const formData = new FormData();
+  formData.append('user_uuid', id);
+ fetch(url, {
+    method:"POST",
+    body: formData, 
+    headers: new Headers({
+  'Authorization': `Bearer ${theToken}`
+  }),
+ })
+.then(res => res.json())
+.then(x => {
+ 
+  if (x.status != 'error') {
+    console.log(x.data);
+    alert(x.data)
+    window.location.reload();
+  } else if (x.status == 'error') {
+    const message = x.error.message == "jwt expired" ? "Please Login to perform this operation" : x.error
+    if (authErrors.includes(message)) { window.location.replace("../../login.html") }
+    alert(message);
+  }
+})
+}
+
 const createUserProfile = (data) => {
     return `  <ul class="list-group">
     <li class="list-group-item">
@@ -83,7 +119,7 @@ const createUserProfile = (data) => {
 <!-- Modal for upload document ends here -->
 
 
-    <a href="#" class="btn btn-success">Suspend Company</a> <a href="#" class="btn btn-danger">Delete Company</a></li>
+    <button class="btn btn-success" onclick="suspendCompany('${data.user.uuid}')">${checkButtonText(data.user.status)}</button></li>
     <li class="list-group-item">
          <h2 class="m-4">Uploaded Documents</h2>
 <!-- Admin company details ends here -->
