@@ -7,6 +7,8 @@ const searchInput = document.getElementById("search-input");
 
 const searchButton = document.getElementById("search-button");
 const userList = document.getElementById('company-list');
+const authErrors = ['Authentication required', 'Please Login to perform this operation']
+
 
 const saveUserId = (id) => {
     console.log('thisnis fkjkj')

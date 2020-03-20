@@ -8,6 +8,9 @@ const searchInput = document.getElementById("search-input");
 const searchButton = document.getElementById("search-button");
 const requestList = document.getElementById('request-row');
 
+const authErrors = ['Authentication required', 'Please Login to perform this operation']
+
+
 
 const updateRequestStatus = (id) => {
     console.log(id);

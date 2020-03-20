@@ -42,6 +42,7 @@ const getProfile = () => {
       companyName.innerHTML = `Company Name: <span style = "color: green;">${x.data.profile.name}</span>`;
       phone.innerHTML = `Phone: <span style = "color: green;">${x.data.profile.phone}</span>`;
       email.innerHTML = `Email: <span style = "color: green;">${x.data.profile.email}</span>`;
+      profilePicture.src = x.data.profile.logo;
       // _status.innerHTML = `Status: <span style = "color: green;">${x.data.profile.status}</span>`
     } else if (x.status == 'error') {
       const message = x.error.message == "jwt expired" ? "Please Login to perform this operation" : x.error

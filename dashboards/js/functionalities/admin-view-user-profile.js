@@ -1,6 +1,7 @@
 const basicProfile = document.getElementById('user-basic-profile');
 const userDoc = document.getElementById('card_container');
 console.log(localStorage.getItem('user_id'));
+const authErrors = ['Authentication required', 'Please Login to perform this operation']
 
 
 const inflateCard = (data) => {

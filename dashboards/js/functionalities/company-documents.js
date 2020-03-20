@@ -32,6 +32,38 @@ const modalUploadButton = document.getElementById("upload-document-modal-button"
 
 
 
+const deleteDoc = (id) => {
+  console.log(id);
+  const theToken = localStorage.getItem('token');
+  if (!theToken) {
+    alert('Please Login')
+    window.location.replace("login.html");
+  }
+  const url = "https://corporate-setup.herokuapp.com/api/v1/file/delete-file"
+  const formData = new FormData();
+  formData.append('file_uuid', id);
+ fetch(url, {
+    method:"PUT",
+    body: formData, 
+    headers: new Headers({
+  'Authorization': `Bearer ${theToken}`
+  }),
+ })
+.then(res => res.json())
+.then(x => {
+ 
+  if (x.status != 'error') {
+    console.log(x.data);
+    alert(x.data)
+    window.location.reload();
+  } else if (x.status == 'error') {
+    const message = x.error.message == "jwt expired" ? "Please Login to perform this operation" : x.error
+    if (authErrors.includes(message)) { window.location.replace("../../login.html") }
+    alert(message);
+  }
+})
+}
+
 
 
 const inflateCard = (data) => {
@@ -89,12 +121,13 @@ const inflateCard = (data) => {
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-          <button type="button" class="btn btn-success" id="modal-confirm-delete-button" data-dismiss="modal" onclick="logoutUser()">Yes</button>
+          <button type="button" class="btn btn-success" id="modal-confirm-delete-button" data-dismiss="modal" onclick="deleteDoc('${data.uuid}')">Yes</button>
         </div>
       </div>
     </div>
   </div>
   <!-- Modal to delete a document ends here -->
+  <a href="${data.file}" target="_blank" class="btn btn-primary">Download</a>
     </li>
                  <!-- The user detail ends here -->
   </ul>`;

@@ -3,15 +3,49 @@ const userDoc = document.getElementById('card_container');
 const container = document.getElementById('company-profile-list');
 console.log(localStorage.getItem('user_id'));
 const _user_uuid = localStorage.getItem('user_id');
+const authErrors = ['Authentication required', 'Please Login to perform this operation']
 
+
+
+const deleteDocument = (id) => {
+  console.log(id);
+  const theToken = localStorage.getItem('token');
+  if (!theToken) {
+    alert('Please Login')
+    window.location.replace("login.html");
+  }
+  const url = "https://corporate-setup.herokuapp.com/api/v1/file/delete-file"
+  const formData = new FormData();
+  formData.append('file_uuid', id);
+ fetch(url, {
+    method:"PUT",
+    body: formData, 
+    headers: new Headers({
+  'Authorization': `Bearer ${theToken}`
+  }),
+ })
+.then(res => res.json())
+.then(x => {
+ 
+  if (x.status != 'error') {
+    console.log(x.data);
+    alert(x.data)
+    window.location.reload();
+  } else if (x.status == 'error') {
+    const message = x.error.message == "jwt expired" ? "Please Login to perform this operation" : x.error
+    if (authErrors.includes(message)) { window.location.replace("../../admin.html") }
+    alert(message);
+  }
+})
+}
 
 const listDocs  = (array) => {
     const all = [];
     array.forEach(x => {
     const ex = ` <li class="list-group-item">${x.name} 
     <div class="text-right">
-    <a href="#" class="btn btn-success">Download</a>
-    <a href="#" class="btn btn-danger">Delete</a>
+    <a href="${x.file}" target="_blank" class="btn btn-success">Download</a>
+    <button class="btn btn-danger" onclick="deleteDocument('${x.uuid}')">Delete</button>
     </div>
     </li>`; 
     all.push(ex);
@@ -24,7 +58,6 @@ const checkButtonText = (status) => {
 }
 
 const suspendCompany = (id) => {
-  console.log(id);
   const theToken = localStorage.getItem('token');
   if (!theToken) {
     alert('Please Login')

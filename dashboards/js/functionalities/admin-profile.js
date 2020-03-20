@@ -11,3 +11,6 @@ const searchButton = document.getElementById("search-button");
 
 const profilePicture = document.getElementById("profile-picture");
 
+const authErrors = ['Authentication required', 'Please Login to perform this operation']
+
+
