@@ -6,8 +6,6 @@ submitSignup.addEventListener('click', function(e){
     
     const signupName = document.getElementById('signup-name').value;
     
-    const signupUsername = document.getElementById('signup-username').value;
-    
     const signupEmail = document.getElementById('signup-email').value;
 
     const signupPhoneNumber = document.getElementById('signup-phone-number').value;
@@ -18,9 +16,8 @@ submitSignup.addEventListener('click', function(e){
 
  if (signupConfirmPassword === signupPassword) {
   let formData = new FormData();
-  formData.append('name', signupName);
+  formData.append('companyName', signupName);
   formData.append('email', signupEmail);
-  formData.append('username', signupUsername);
   formData.append('phone', signupPhoneNumber);
   formData.append('password', signupPassword);
   formData.append('role', 'user')

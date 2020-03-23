@@ -230,7 +230,8 @@ const shareFile = (name,given_by, date_acquired, expired_date, file, owner_uuid)
   .then(res => res.json())
   .then(x => {
     if (x.status != 'error') {
-        location.reload()
+        alert(x.data);
+        location.reload();
     } else if (x.status == 'error') {
       const message = x.error.message == "jwt expired" ? "Please Login to perform this operation" : x.error
       if (authErrors.includes(message)) { window.location.replace("../../login.html") }
