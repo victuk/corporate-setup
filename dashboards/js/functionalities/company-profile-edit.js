@@ -8,6 +8,8 @@ const companyName = document.getElementById('companyInputName');
 
 const uploadPicture = document.getElementById('upload-profile-picture-button');
 
+const briefSummary = document.getElementById('brief-summary');
+
 const authErrors = ['Authentication required', 'Please Login to perform this operation']
 
 
