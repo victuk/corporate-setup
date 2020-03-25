@@ -139,14 +139,25 @@
 					 <h2 class="m-4">Uploaded Documents</h2>
 					 <li class="list-group-item">
 				<!-- Company details starts here -->
-			<ul class="list-group" data-owner="data.owner_uuid" data-file="data.file">
+			<ul class="list-group my-5" data-owner="data.owner_uuid" data-file="data.file">
 				<li class="list-group-item" id="name-of-document">${data.name} </li>
 				<li class="list-group-item" id="body-responsible-for-document">${data.given_by}</li>
 				<li class="list-group-item" id="document-date-acquired">${data.date_acquired}</li>
 				<li class="list-group-item" id="document-expiey-date">${data.expired_date}</li>
 				<li class="list-group-item" id="document-expiey-date"><a href="${data.file}" target="_blank" class="btn btn-primary">Download</a></li>
-				<!-- Company details ends here -->
+				
 			</ul>
+			<!-- Company details ends here -->
+			<!-- Company details starts here -->
+			<ul class="list-group  my-5" data-owner="data.owner_uuid" data-file="data.file">
+				<li class="list-group-item" id="name-of-document">${data.name} </li>
+				<li class="list-group-item" id="body-responsible-for-document">${data.given_by}</li>
+				<li class="list-group-item" id="document-date-acquired">${data.date_acquired}</li>
+				<li class="list-group-item" id="document-expiey-date">${data.expired_date}</li>
+				<li class="list-group-item" id="document-expiey-date"><a href="${data.file}" target="_blank" class="btn btn-primary">Download</a></li>
+				
+			</ul>
+			<!-- Company details ends here -->
 			</li>
 			</li>
 			</ul>
