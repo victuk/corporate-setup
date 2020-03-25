@@ -1,6 +1,5 @@
-//Template to make naming easy ;)
-//const  = document.getElementById("");
-const authErrors = ['Authentication required', 'Please Login to perform this operation']
+
+// const authErrors = ['Authentication required', 'Please Login to perform this operation']
 
 const searchInput = document.getElementById("search-input");
 
@@ -17,6 +16,8 @@ const companyName = document.getElementById("name__");
 const phone = document.getElementById("phone__");
 
 const email = document.getElementById("email__");
+
+const summary = document.getElementById("brief-summary");
 
 // const _status = document.getElementById("status__");
 
@@ -39,15 +40,18 @@ const getProfile = () => {
   .then(res => res.json())
   .then(x => {
     if (x.status != 'error') {
+      console.log(x.data);
       companyName.innerHTML = `Company Name: <span style = "color: green;">${x.data.profile.name}</span>`;
       phone.innerHTML = `Phone: <span style = "color: green;">${x.data.profile.phone}</span>`;
       email.innerHTML = `Email: <span style = "color: green;">${x.data.profile.email}</span>`;
       profilePicture.src = x.data.profile.logo;
+      summary.value = x.data.profile.summary
       // _status.innerHTML = `Status: <span style = "color: green;">${x.data.profile.status}</span>`
     } else if (x.status == 'error') {
+      console.log(x.error);
       const message = x.error.message == "jwt expired" ? "Please Login to perform this operation" : x.error
-      if (authErrors.includes(message)) { window.location.replace("../login.html") }
       alert(message);
+      if (authErrors.includes(message)) { window.location.replace("../login.html") }
     }
   })
 }

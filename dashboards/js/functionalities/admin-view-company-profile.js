@@ -105,6 +105,12 @@ const createUserProfile = (data) => {
                 
             </div>
     </li>
+    <li class="list-group-item">
+    <div class="form-group">
+					<label for="brief-summary">Brief Summary of your Company</label>
+					<textarea class="md-textarea form-control" id="brief-summary" disabled style="padding-bottom:40px;">${data.user.summary}</textarea>
+		</div>
+</li>
     <li class="list-group-item">${data.user.name}</li>
     <li class="list-group-item">${data.user.email}</li>
     <li class="list-group-item">${data.user.phone}</li>

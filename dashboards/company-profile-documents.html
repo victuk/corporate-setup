@@ -105,7 +105,7 @@
 						<!-- <input  class="form-control mr-sm-2"  name="myBrowser" /></label>
 				 -->
 				
-				<input class="form-control mr-sm-2 border border-success" onkeyup="userDropDown()" list="company-list" id="search-a-company" type="search" placeholder="Search" aria-label="Search">
+				<input class="form-control mr-sm-2 border border-success" onkeyup="userDropDown()" list="company-list" id="search-a-company" type="search" placeholder="Search" aria-label="Search" onchange="saveCompanyUUID()">
 				<datalist id="company-list">
 				  
 					</datalist>	
@@ -179,9 +179,10 @@
       </div>
 		</div>
 		
+	<!-- <script src="js/functionalities/company-profile.js"></script>	 -->
+	<script src="js/functionalities/for-all-searches.js"></script>
 	<script src="js/functionalities/for-all-logouts.js"></script>
 	<script src="js/functionalities/company-documents.js"></script>
-	<script src="js/functionalities/for-all-searches.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>

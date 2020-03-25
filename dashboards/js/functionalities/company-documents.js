@@ -1,7 +1,7 @@
 //Template to make naming easy ;)
 //const  = document.getElementById("");
 
-const authErrors = ['Authentication required', 'Please Login to perform this operation']
+// const authErrors = ['Authentication required', 'Please Login to perform this operation']
 
 const cardTitle = document.getElementById("card-title");
 

@@ -4,16 +4,23 @@ const searchACompanyButton = document.getElementById('search-a-company-button');
 
 const companyList = document.getElementById('company-list');
 
+const authErrors = ['Authentication required', 'Please Login to perform this operation', 'Authentication Failed']
+
 
 const inflate = (data) => {
   return`<option value="${data.email}">${data.name}</option>`;
 }
 
+const saveCompanyUUID = () => {
+console.log(searchACompany.value);
+localStorage.setItem('searched_user_email', searchACompany.value);
+ window.location.replace("./company-view-company-profile.html")
+}
 userDropDown = () =>{
   const theToken = localStorage.getItem('token');
   if (!theToken) {
     alert('Please Login')
-    window.location.replace("admin.html");
+    window.location.replace("login.html");
   }
   const url = "https://corporate-setup.herokuapp.com/api/v1/user/search-user";
  fetch(`${url}?input=${searchACompany.value}`, {
@@ -44,4 +51,6 @@ userDropDown = () =>{
   searchACompanyButton.addEventListener('click', function(e){
     e.preventDefault();
     console.log(searchACompany.value);
+    localStorage.setItem('searched_user_email', searchACompany.value);
+    window.location.replace("./company-view-company-profile.html")
   });

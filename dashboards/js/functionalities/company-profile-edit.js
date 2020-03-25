@@ -10,7 +10,7 @@ const uploadPicture = document.getElementById('upload-profile-picture-button');
 
 const briefSummary = document.getElementById('brief-summary');
 
-const authErrors = ['Authentication required', 'Please Login to perform this operation']
+// const authErrors = ['Authentication required', 'Please Login to perform this operation']
 
 
 // get user profile
@@ -59,6 +59,7 @@ updateButton.addEventListener('click', (e) => {
     formData.append('companyName', companyName.value);
     formData.append('email', companyEmail.value);
     formData.append('phone', companyPhoneNumber.value);
+    formData.append('summary', briefSummary.value);
      
     if (uploadPicture.files[0]) {
         formData.append('file', uploadPicture.files[0]);

@@ -1,5 +1,5 @@
 
-const authErrors = ['Authentication required', 'Please Login to perform this operation']
+// const authErrors = ['Authentication required', 'Please Login to perform this operation']
 
 const applyForService = (email, service) => {
     const theToken = localStorage.getItem('token');
