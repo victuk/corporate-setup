@@ -1,8 +1,11 @@
 const url = "https://corporate-setup.herokuapp.com/api/v1/user/signup";
 const submitSignup = document.getElementById('signup-button');
+const terms_condition = document.getElementById('terms_condition');
 
 submitSignup.addEventListener('click', function(e){
     e.preventDefault();
+
+    if (terms_condition.checked == false) return alert('You must agree to terms and conditions');
     
     const signupName = document.getElementById('signup-name').value;
     
